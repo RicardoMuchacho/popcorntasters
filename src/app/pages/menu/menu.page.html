@@ -1,0 +1,48 @@
+<ion-split-pane contentId="menu">
+  <ion-menu side="end" menuId="first" contentId="menu">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        
+        
+        <ion-menu-toggle auto-hide="false" *ngFor="let page of pages; let i = index">
+          <ion-item (click)="changeSelectedIndex(i)" routerDirection="root" [routerLink]="[page.url]"
+          lines="none" detail="false" [class.selected]="selectedIndex == i">
+          <ion-icon slot="start" [name]="page.icon + '-outline'"></ion-icon>
+          <ion-label>{{page.title}}</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      
+      
+      <ion-menu-toggle auto-hide="false">
+        <ion-item [routerLink]="['/user-activity/']" routerDirection="root" lines="none" detail="false">
+          <ion-icon slot="start" [name]="'book-outline'"></ion-icon>
+          <ion-label>User Activity</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      
+      <ion-menu-toggle auto-hide="false">
+        <ion-item [routerLink]="['/user-top/']" routerDirection="root" lines="none" detail="false">
+          <ion-icon slot="start" [name]="'star-outline'"></ion-icon>
+          <ion-label>Favorite Movies</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      
+      
+      <ion-menu-toggle auto-hide="false">
+        <ion-item (click)="logout()" routerDirection="root" lines="none" detail="false">
+          <ion-icon slot="start" [name]="'exit-outline'"></ion-icon>
+          <ion-label>Log out</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+
+<ion-router-outlet id="menu" menu></ion-router-outlet>
+</ion-split-pane>
