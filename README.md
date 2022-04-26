@@ -1,6 +1,6 @@
 # PopcornTasters: A Movies Reviews App
 
-Web App Link: https://popcorntasters-app.netlify.app/
+Mobile Web App Link: https://popcorntasters-app.netlify.app/
 
 Mobile app: Download and install Apk provided in repo
 
