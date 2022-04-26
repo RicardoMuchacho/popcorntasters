@@ -1,4 +1,9 @@
 # PopcornTasters: A Movies Reviews App
+
+Web App Link: https://popcorntasters-app.netlify.app/
+
+Mobile app: Download and install Apk provided in repo
+
 Aplicación enfocada para clientes con dispositivos móviles, desarrollada usando Ionic & Angular.
 
 Es una aplicación similar a Rotten Tomatoes.
