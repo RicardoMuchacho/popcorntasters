@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { apiBaseUrl } from 'src/app/utils/constants';
 
 @Component({
   selector: 'app-register',
@@ -23,7 +24,7 @@ export class RegisterPage implements OnInit {
     const name = this.name;
     const password = this.password;
     
-    fetch('https://popcorntasters-api.herokuapp.com/auth/register', {
+    fetch(apiBaseUrl+'auth/register', {
     method: 'POST',
     headers: new Headers({
       // Encabezados

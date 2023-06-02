@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { apiBaseUrl } from 'src/app/utils/constants';
 
 @Component({
   selector: 'app-user-top',
@@ -17,7 +18,7 @@ export class UserTopPage implements OnInit {
     
     this.http
     .get<any>(
-      'https://popcorntasters-api.herokuapp.com/users/' +
+      apiBaseUrl+'users/' +
       this.username +
       '/movies'
       )

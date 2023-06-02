@@ -11,16 +11,17 @@
     <h1>Log in to PopcornTasters</h1>
   </div>
   
-  <ion-item>
-    <ion-input [(ngModel)]="username" type="text" placeholder="Username"></ion-input>
-  </ion-item>
-  <br>
-  <ion-item>
-    <ion-input [(ngModel)]="password" type="password" placeholder="Password"></ion-input>
-  </ion-item>
-  <br>
-  <ion-button [disabled]="!username ||!password " expand="block" shape="round" (click)= "login()">Login</ion-button>
-  
+  <div class="login-container">
+    <ion-item>
+      <ion-input [(ngModel)]="username" type="text" placeholder="Username"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-input [(ngModel)]="password" type="password" placeholder="Password"></ion-input>
+    </ion-item>
+    <br>
+    <ion-button [disabled]="!username ||!password " expand="block" shape="round" (click)= "login()">Login</ion-button>
+  </div>
   
   <div id="register">
     <br/>

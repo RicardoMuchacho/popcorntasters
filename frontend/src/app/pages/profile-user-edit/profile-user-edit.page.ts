@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
+import { apiBaseUrl } from 'src/app/utils/constants';
 
 @Component({
   selector: 'app-profile-user-edit',
@@ -28,7 +29,7 @@ export class ProfileUserEditPage implements OnInit {
     const name = this.name;
     const password = this.password;
 
-    fetch('https://popcorntasters-api.herokuapp.com/users/' + usernameA, {
+    fetch(apiBaseUrl+'users/' + usernameA, {
       method: 'PUT',
       headers: new Headers({
         // Encabezados

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
 import { AlertController, NavController } from '@ionic/angular';
+import { apiBaseUrl } from 'src/app/utils/constants';
 
 @Component({
   selector: 'app-profile-movie',
@@ -37,7 +38,7 @@ export class ProfileMoviePage implements OnInit {
       this.profileId = this.activatedRoute.snapshot.paramMap.get('id');
       this.http
       .get<any>(
-        'https://popcorntasters-api.herokuapp.com/movies/details/' +
+        apiBaseUrl+'movies/details/' +
         this.profileId
         )
         .subscribe((res) => {
@@ -71,7 +72,7 @@ export class ProfileMoviePage implements OnInit {
               handler: () => {  
                 
                 fetch(
-                  'https://popcorntasters-api.herokuapp.com/movies/comment/' +
+                  apiBaseUrl+'movies/comment/' +
                   this.movie_id,
                   {
                     method: 'POST',
@@ -124,7 +125,7 @@ export class ProfileMoviePage implements OnInit {
                 handler: () => {  
                   
                   fetch(
-                    'https://popcorntasters-api.herokuapp.com/users/' +
+                    apiBaseUrl+'users/' +
                     this.username +
                     '/ratings',
                     {
@@ -180,7 +181,7 @@ export class ProfileMoviePage implements OnInit {
                     handler: () => {  
                       
                       fetch(
-                        'https://popcorntasters-api.herokuapp.com/users/' +
+                        apiBaseUrl+'users/' +
                         this.username +
                         '/movies',
                         {

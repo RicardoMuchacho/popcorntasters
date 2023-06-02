@@ -29,12 +29,12 @@ const routes = [
     },
     {
         path: 'login',
-        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_login_login_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/login/login.module */ 1053)).then((m) => m.LoginPageModule),
+        loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("common"), __webpack_require__.e("src_app_pages_login_login_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./pages/login/login.module */ 1053)).then((m) => m.LoginPageModule),
         canActivate: [_guards_not_loggedin_guard__WEBPACK_IMPORTED_MODULE_0__.NotLoggedinGuard],
     },
     {
         path: 'register',
-        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_register_register_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/register/register.module */ 207)).then((m) => m.RegisterPageModule),
+        loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("common"), __webpack_require__.e("src_app_pages_register_register_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./pages/register/register.module */ 207)).then((m) => m.RegisterPageModule),
         canActivate: [_guards_not_loggedin_guard__WEBPACK_IMPORTED_MODULE_0__.NotLoggedinGuard],
     },
     {
@@ -44,31 +44,31 @@ const routes = [
     },
     {
         path: 'search-movie',
-        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_search-movie_search-movie_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/search-movie/search-movie.module */ 8015)).then((m) => m.SearchMoviePageModule),
+        loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("common"), __webpack_require__.e("src_app_pages_search-movie_search-movie_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./pages/search-movie/search-movie.module */ 8015)).then((m) => m.SearchMoviePageModule),
     },
     {
         path: 'profile-movie/:id',
-        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_profile-movie_profile-movie_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/profile-movie/profile-movie.module */ 9754)).then((m) => m.ProfileMoviePageModule),
+        loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("common"), __webpack_require__.e("src_app_pages_profile-movie_profile-movie_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./pages/profile-movie/profile-movie.module */ 9754)).then((m) => m.ProfileMoviePageModule),
     },
     {
         path: 'profile-user-edit',
-        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_profile-user-edit_profile-user-edit_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/profile-user-edit/profile-user-edit.module */ 9204)).then((m) => m.ProfileUserEditPageModule),
+        loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("common"), __webpack_require__.e("src_app_pages_profile-user-edit_profile-user-edit_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./pages/profile-user-edit/profile-user-edit.module */ 9204)).then((m) => m.ProfileUserEditPageModule),
     },
     {
         path: 'profile-user',
-        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_profile-user_profile-user_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages//profile-user/profile-user.module */ 9596)).then((m) => m.ProfileUserPageModule),
+        loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("common"), __webpack_require__.e("src_app_pages_profile-user_profile-user_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./pages//profile-user/profile-user.module */ 9596)).then((m) => m.ProfileUserPageModule),
     },
     {
         path: 'user-activity',
-        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_user-activity_user-activity_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/user-activity/user-activity.module */ 8998)).then((m) => m.UserActivityPageModule),
+        loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("common"), __webpack_require__.e("src_app_pages_user-activity_user-activity_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./pages/user-activity/user-activity.module */ 8998)).then((m) => m.UserActivityPageModule),
     },
     {
         path: 'user-top',
-        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_user-top_user-top_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/user-top/user-top.module */ 353)).then((m) => m.UserTopPageModule),
+        loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("common"), __webpack_require__.e("src_app_pages_user-top_user-top_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./pages/user-top/user-top.module */ 353)).then((m) => m.UserTopPageModule),
     },
     {
         path: 'profile-user-delete',
-        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_profile-user-delete_profile-user-delete_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/profile-user-delete/profile-user-delete.module */ 8925)).then((m) => m.ProfileUserDeletePageModule),
+        loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("common"), __webpack_require__.e("src_app_pages_profile-user-delete_profile-user-delete_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./pages/profile-user-delete/profile-user-delete.module */ 8925)).then((m) => m.ProfileUserDeletePageModule),
     },
 ];
 let AppRoutingModule = class AppRoutingModule {

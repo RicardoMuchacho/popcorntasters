@@ -7,6 +7,13 @@ ion-toolbar {
 ion-content {
     --background: #222428;
     
+    .login-container{
+        padding-top: 20px;
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-bottom: 20px;
+     }
+
     #header {
         font-family:Arial, Helvetica, sans-serif;
         display: flex;
@@ -22,7 +29,6 @@ ion-content {
             font-weight: 700;
             font-size:26px;
             color: #ffffff;
-            margin-bottom: 15%;
         }
 
         img {
@@ -36,11 +42,7 @@ ion-content {
             font-weight: 400;
             font-size:20px;
             color: #ffffff;
-            margin-bottom: 5%;
         }
-        
-        
-        
     }
     
     ion-item {

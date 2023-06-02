@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { AlertController, NavController } from '@ionic/angular';
 import { ActivatedRoute } from '@angular/router';
+import { apiBaseUrl } from 'src/app/utils/constants';
 
 @Component({
   selector: 'app-profile-user-delete',
@@ -37,7 +38,7 @@ export class ProfileUserDeletePage implements OnInit {
             text: 'Yes',
             handler: () => {
               
-              fetch('https://popcorntasters-api.herokuapp.com/users/' + this.username, {
+              fetch(apiBaseUrl+'users/' + this.username, {
               method: 'DELETE',
               headers: new Headers({
                 // Encabezados

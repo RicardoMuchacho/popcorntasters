@@ -1,6 +1,21 @@
 "use strict";
 (self["webpackChunkapp"] = self["webpackChunkapp"] || []).push([["common"],{
 
+/***/ 9526:
+/*!************************************!*\
+  !*** ./src/app/utils/constants.ts ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "apiBaseUrl": () => (/* binding */ apiBaseUrl)
+/* harmony export */ });
+const apiBaseUrl = "http://popcorntasters-api-production.up.railway.app";
+
+
+/***/ }),
+
 /***/ 5800:
 /*!*********************************************************************!*\
   !*** ./node_modules/@ionic/core/dist/esm/button-active-eaaa6ece.js ***!

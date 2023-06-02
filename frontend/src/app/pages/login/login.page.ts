@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { apiBaseUrl } from 'src/app/utils/constants';
 
 @Component({
   selector: 'app-login',
@@ -19,7 +20,7 @@ export class LoginPage implements OnInit {
     const username = this.username;
     const password = this.password;
     
-    fetch('https://popcorntasters-api.herokuapp.com/auth/login', {
+    fetch(apiBaseUrl+'auth/login', {
     method: 'POST',
     headers: new Headers({
       // Encabezados

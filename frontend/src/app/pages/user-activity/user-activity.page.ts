@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
+import { apiBaseUrl } from 'src/app/utils/constants';
 
 @Component({
   selector: 'app-user-activity',
@@ -23,7 +24,7 @@ export class UserActivityPage implements OnInit {
     ngOnInit() {
       this.http
       .get<any>(
-        'https://popcorntasters-api.herokuapp.com/users/' +
+        apiBaseUrl+'users/' +
         this.username +
         '/comments'
         )
@@ -34,7 +35,7 @@ export class UserActivityPage implements OnInit {
         
         this.http
         .get<any>(
-          'https://popcorntasters-api.herokuapp.com/users/' +
+          apiBaseUrl+'users/' +
           this.username +
           '/ratings'
           )

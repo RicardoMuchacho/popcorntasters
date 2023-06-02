@@ -93,13 +93,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ProfileMoviePage": () => (/* binding */ ProfileMoviePage)
 /* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tslib */ 4929);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ 4929);
 /* harmony import */ var _profile_movie_page_html_ngResource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./profile-movie.page.html?ngResource */ 8260);
 /* harmony import */ var _profile_movie_page_scss_ngResource__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./profile-movie.page.scss?ngResource */ 5668);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ 3184);
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 8784);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ 2816);
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic/angular */ 3819);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/core */ 3184);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ 8784);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ 2816);
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic/angular */ 3819);
+/* harmony import */ var src_app_utils_constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/utils/constants */ 9526);
+
 
 
 
@@ -121,7 +123,7 @@ let ProfileMoviePage = class ProfileMoviePage {
     ngOnInit() {
         this.profileId = this.activatedRoute.snapshot.paramMap.get('id');
         this.http
-            .get('https://popcorntasters-api.herokuapp.com/movies/details/' +
+            .get(src_app_utils_constants__WEBPACK_IMPORTED_MODULE_2__.apiBaseUrl + 'movies/details/' +
             this.profileId)
             .subscribe((res) => {
             this.movie_id = res.details.id;
@@ -139,7 +141,7 @@ let ProfileMoviePage = class ProfileMoviePage {
         });
     }
     addComment() {
-        return (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__awaiter)(this, void 0, void 0, function* () {
+        return (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__awaiter)(this, void 0, void 0, function* () {
             const description = this.description;
             const alert = yield this.alertController.create({
                 header: 'Comment added',
@@ -147,7 +149,7 @@ let ProfileMoviePage = class ProfileMoviePage {
                     {
                         text: 'OK',
                         handler: () => {
-                            fetch('https://popcorntasters-api.herokuapp.com/movies/comment/' +
+                            fetch(src_app_utils_constants__WEBPACK_IMPORTED_MODULE_2__.apiBaseUrl + 'movies/comment/' +
                                 this.movie_id, {
                                 method: 'POST',
                                 headers: new Headers({
@@ -181,7 +183,7 @@ let ProfileMoviePage = class ProfileMoviePage {
         });
     }
     addRating() {
-        return (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__awaiter)(this, void 0, void 0, function* () {
+        return (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__awaiter)(this, void 0, void 0, function* () {
             const rating = this.rating;
             const alert = yield this.alertController.create({
                 header: 'Rating added',
@@ -189,7 +191,7 @@ let ProfileMoviePage = class ProfileMoviePage {
                     {
                         text: 'OK',
                         handler: () => {
-                            fetch('https://popcorntasters-api.herokuapp.com/users/' +
+                            fetch(src_app_utils_constants__WEBPACK_IMPORTED_MODULE_2__.apiBaseUrl + 'users/' +
                                 this.username +
                                 '/ratings', {
                                 method: 'POST',
@@ -224,7 +226,7 @@ let ProfileMoviePage = class ProfileMoviePage {
         });
     }
     addFav() {
-        return (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__awaiter)(this, void 0, void 0, function* () {
+        return (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__awaiter)(this, void 0, void 0, function* () {
             const rating = this.rating;
             const alert = yield this.alertController.create({
                 header: 'Movie Added to Favorites',
@@ -232,7 +234,7 @@ let ProfileMoviePage = class ProfileMoviePage {
                     {
                         text: 'OK',
                         handler: () => {
-                            fetch('https://popcorntasters-api.herokuapp.com/users/' +
+                            fetch(src_app_utils_constants__WEBPACK_IMPORTED_MODULE_2__.apiBaseUrl + 'users/' +
                                 this.username +
                                 '/movies', {
                                 method: 'PUT',
@@ -263,13 +265,13 @@ let ProfileMoviePage = class ProfileMoviePage {
     }
 };
 ProfileMoviePage.ctorParameters = () => [
-    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__.HttpClient },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__.ActivatedRoute },
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_5__.AlertController },
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_5__.NavController }
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__.HttpClient },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__.ActivatedRoute },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_6__.AlertController },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_6__.NavController }
 ];
-ProfileMoviePage = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__decorate)([
-    (0,_angular_core__WEBPACK_IMPORTED_MODULE_6__.Component)({
+ProfileMoviePage = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_7__.Component)({
         selector: 'app-profile-movie',
         template: _profile_movie_page_html_ngResource__WEBPACK_IMPORTED_MODULE_0__,
         styles: [_profile_movie_page_scss_ngResource__WEBPACK_IMPORTED_MODULE_1__]

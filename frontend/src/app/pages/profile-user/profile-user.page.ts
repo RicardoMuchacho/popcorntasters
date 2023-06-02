@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
+import { apiBaseUrl } from 'src/app/utils/constants';
 
 @Component({
   selector: 'app-profile-user',
@@ -23,7 +24,7 @@ export class ProfileUserPage implements OnInit {
     ngOnInit() {
       this.http
       .get<any>(
-        'https://popcorntasters-api.herokuapp.com/users/' + this.username
+        apiBaseUrl+'users/' + this.username
         )
         .subscribe((res) => {
           console.log(res);

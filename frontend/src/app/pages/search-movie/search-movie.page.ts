@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { apiBaseUrl } from 'src/app/utils/constants';
 
 @Component({
   selector: 'app-search-movie',
@@ -15,7 +16,7 @@ export class SearchMoviePage implements OnInit {
   
   ngOnInit() {
     this.http
-    .get<any>('https://popcorntasters-api.herokuapp.com/movies/')
+    .get<any>(apiBaseUrl+'movies/')
     .subscribe((res) => {
       this.movieS = res;
     });
@@ -28,7 +29,7 @@ export class SearchMoviePage implements OnInit {
     
     this.http
     .get<any>(
-      'https://popcorntasters-api.herokuapp.com/movies/' + this.searchTerm
+      apiBaseUrl+'movies/' + this.searchTerm
       )
       .subscribe((res) => {
         this.moreMovies = res;

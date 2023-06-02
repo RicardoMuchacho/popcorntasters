@@ -96,11 +96,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "SearchMoviePage": () => (/* binding */ SearchMoviePage)
 /* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ 4929);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tslib */ 4929);
 /* harmony import */ var _search_movie_page_html_ngResource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./search-movie.page.html?ngResource */ 6568);
 /* harmony import */ var _search_movie_page_scss_ngResource__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./search-movie.page.scss?ngResource */ 552);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 3184);
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ 8784);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 3184);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 8784);
+/* harmony import */ var src_app_utils_constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/utils/constants */ 9526);
+
 
 
 
@@ -114,7 +116,7 @@ let SearchMoviePage = class SearchMoviePage {
     }
     ngOnInit() {
         this.http
-            .get('https://popcorntasters-api.herokuapp.com/movies/')
+            .get(src_app_utils_constants__WEBPACK_IMPORTED_MODULE_2__.apiBaseUrl + 'movies/')
             .subscribe((res) => {
             this.movieS = res;
         });
@@ -123,7 +125,7 @@ let SearchMoviePage = class SearchMoviePage {
         const searchTerm = this.searchTerm;
         console.log('this is working');
         this.http
-            .get('https://popcorntasters-api.herokuapp.com/movies/' + this.searchTerm)
+            .get(src_app_utils_constants__WEBPACK_IMPORTED_MODULE_2__.apiBaseUrl + 'movies/' + this.searchTerm)
             .subscribe((res) => {
             this.moreMovies = res;
             console.log(this.moreMovies);
@@ -132,10 +134,10 @@ let SearchMoviePage = class SearchMoviePage {
     }
 };
 SearchMoviePage.ctorParameters = () => [
-    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__.HttpClient }
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__.HttpClient }
 ];
-SearchMoviePage = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
-    (0,_angular_core__WEBPACK_IMPORTED_MODULE_4__.Component)({
+SearchMoviePage = (0,tslib__WEBPACK_IMPORTED_MODULE_4__.__decorate)([
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_5__.Component)({
         selector: 'app-search-movie',
         template: _search_movie_page_html_ngResource__WEBPACK_IMPORTED_MODULE_0__,
         styles: [_search_movie_page_scss_ngResource__WEBPACK_IMPORTED_MODULE_1__]

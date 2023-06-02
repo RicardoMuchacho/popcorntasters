@@ -93,12 +93,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ProfileUserEditPage": () => (/* binding */ ProfileUserEditPage)
 /* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tslib */ 4929);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! tslib */ 4929);
 /* harmony import */ var _profile_user_edit_page_html_ngResource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./profile-user-edit.page.html?ngResource */ 9190);
 /* harmony import */ var _profile_user_edit_page_scss_ngResource__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./profile-user-edit.page.scss?ngResource */ 5262);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 3184);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ 2816);
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 8784);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ 3184);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ 2816);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ 8784);
+/* harmony import */ var src_app_utils_constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/utils/constants */ 9526);
+
 
 
 
@@ -119,7 +121,7 @@ let ProfileUserEditPage = class ProfileUserEditPage {
         const username = this.username;
         const name = this.name;
         const password = this.password;
-        fetch('https://popcorntasters-api.herokuapp.com/users/' + usernameA, {
+        fetch(src_app_utils_constants__WEBPACK_IMPORTED_MODULE_2__.apiBaseUrl + 'users/' + usernameA, {
             method: 'PUT',
             headers: new Headers({
                 // Encabezados
@@ -149,12 +151,12 @@ let ProfileUserEditPage = class ProfileUserEditPage {
     }
 };
 ProfileUserEditPage.ctorParameters = () => [
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__.Router },
-    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__.HttpClient },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__.ActivatedRoute }
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__.Router },
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__.HttpClient },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__.ActivatedRoute }
 ];
-ProfileUserEditPage = (0,tslib__WEBPACK_IMPORTED_MODULE_4__.__decorate)([
-    (0,_angular_core__WEBPACK_IMPORTED_MODULE_5__.Component)({
+ProfileUserEditPage = (0,tslib__WEBPACK_IMPORTED_MODULE_5__.__decorate)([
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_6__.Component)({
         selector: 'app-profile-user-edit',
         template: _profile_user_edit_page_html_ngResource__WEBPACK_IMPORTED_MODULE_0__,
         styles: [_profile_user_edit_page_scss_ngResource__WEBPACK_IMPORTED_MODULE_1__]

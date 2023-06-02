@@ -93,11 +93,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "UserTopPage": () => (/* binding */ UserTopPage)
 /* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ 4929);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tslib */ 4929);
 /* harmony import */ var _user_top_page_html_ngResource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./user-top.page.html?ngResource */ 2262);
 /* harmony import */ var _user_top_page_scss_ngResource__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./user-top.page.scss?ngResource */ 2757);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 3184);
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ 8784);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 3184);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 8784);
+/* harmony import */ var src_app_utils_constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/utils/constants */ 9526);
+
 
 
 
@@ -112,7 +114,7 @@ let UserTopPage = class UserTopPage {
     ngOnInit() {
         console.log(this.username);
         this.http
-            .get('https://popcorntasters-api.herokuapp.com/users/' +
+            .get(src_app_utils_constants__WEBPACK_IMPORTED_MODULE_2__.apiBaseUrl + 'users/' +
             this.username +
             '/movies')
             .subscribe((res) => {
@@ -122,10 +124,10 @@ let UserTopPage = class UserTopPage {
     }
 };
 UserTopPage.ctorParameters = () => [
-    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__.HttpClient }
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__.HttpClient }
 ];
-UserTopPage = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
-    (0,_angular_core__WEBPACK_IMPORTED_MODULE_4__.Component)({
+UserTopPage = (0,tslib__WEBPACK_IMPORTED_MODULE_4__.__decorate)([
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_5__.Component)({
         selector: 'app-user-top',
         template: _user_top_page_html_ngResource__WEBPACK_IMPORTED_MODULE_0__,
         styles: [_user_top_page_scss_ngResource__WEBPACK_IMPORTED_MODULE_1__]

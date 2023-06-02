@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { apiBaseUrl } from 'src/app/utils/constants';
 
 @Component({
   selector: 'app-main',
@@ -15,7 +16,7 @@ export class MainPage implements OnInit {
   
   ngOnInit() {
     this.http
-    .get<any>('https://popcorntasters-api.herokuapp.com/movies/top20')
+    .get<any>(apiBaseUrl+'movies/top20')
     .subscribe((res) => {
       this.top20 = res;
     });
