@@ -1,0 +1,45 @@
+<app-header-profile title="Edit Profile"></app-header-profile>
+
+<ion-content>
+  <div id="header">
+    <h1>Edit your Profile</h1>
+    <img src="assets/logos/user-edit.png" />
+    <h2>Enter your new data:</h2>
+  </div>
+  <br>
+  <ion-card class="ion-margin">
+    <br />
+    <ion-item>
+      <ion-input
+      [(ngModel)]="username"
+      type="text"
+      required
+      placeholder="Enter your new username"
+      ></ion-input>
+    </ion-item>
+    <br />
+    <ion-item>
+      <ion-input
+      [(ngModel)]="name"
+      type="text"
+      required
+      placeholder="Enter your new name"
+      ></ion-input>
+    </ion-item>
+    <br />
+    <ion-item>
+      <ion-input
+      [(ngModel)]="password"
+      type="password"
+      placeholder="Enter your new password"
+      ></ion-input>
+    </ion-item>
+    <br />
+    
+    <div id="edit">
+      <ion-button [disabled]="!username ||!password ||!name" expand="block" shape="round" (click)="editUser()"
+      >Finish Edit</ion-button
+      >
+    </div>
+  </ion-card>
+</ion-content>

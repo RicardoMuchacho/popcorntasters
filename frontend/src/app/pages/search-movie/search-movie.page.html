@@ -1,0 +1,21 @@
+<app-header-go-main title="Search a Movie"></app-header-go-main>
+
+<ion-content class="ion-padding">
+  
+  <ion-searchbar placeholder="Name, genre or year of publication..." [(ngModel)]="searchTerm" showCancelButton="focus" animated>
+    
+    <ion-button (click)="addMovies()" >Add Movies</ion-button>
+    
+  </ion-searchbar>
+  
+  
+  <ion-list>
+    <ion-item *ngFor="let moviesearch of movieS | filter:searchTerm" [routerLink]="['/profile-movie/' + moviesearch.id]">
+      <ion-label> {{moviesearch.title}} </ion-label>
+      <ion-label> {{moviesearch.genre}} </ion-label>
+      <ion-label> {{moviesearch.year}} </ion-label>
+    </ion-item>
+  </ion-list>  
+  
+  
+</ion-content>

@@ -1,0 +1,21 @@
+<app-header-go-main title="Favorite Movies"></app-header-go-main>
+
+<ion-content>
+  
+  <ion-card id="Favs">
+    <img src="assets/logos/logo1.png" />
+    <h1>List of Favorites:</h1>
+    
+    <ion-list>
+      <ion-item
+      *ngFor="let favS of favs"
+      [routerLink]="['/profile-movie/' + favS.id]"
+      >
+      <ion-label> ☆ {{favS.title}} </ion-label>
+    </ion-item>
+  </ion-list>
+  
+</ion-card>
+
+
+</ion-content>
