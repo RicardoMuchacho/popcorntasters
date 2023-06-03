@@ -37,11 +37,11 @@ export class RegisterPage implements OnInit {
     }),
   })
   .then((response) => {
-    console.log(response);
-    if (response.redirected == true) {
-      window.location.replace(response.url);
-    }
-    console.log('New account created...');
+    // console.log(response);
+    // if (response.redirected == true) {
+    //   window.location.replace(response.url);
+    // }
+    // console.log('New account created...');
     alert("New account created...");
     this.router.navigate(['/login']);
     return response.json();
