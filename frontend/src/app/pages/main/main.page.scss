@@ -5,3 +5,11 @@ ion-toolbar {
 ion-content {
     --background: #222428;
 }
+
+ion-footer {
+    --background: #1a1a1c;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}

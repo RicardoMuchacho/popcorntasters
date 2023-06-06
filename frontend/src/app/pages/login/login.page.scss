@@ -9,7 +9,7 @@ ion-content {
     --background: #222428;
     
     .login-container{
-       padding-top: 80px;
+       padding-top: 20px;
        padding-left: 80px;
        padding-right: 80px;
        padding-bottom: 20px;
@@ -35,6 +35,7 @@ ion-content {
             font-weight: 700;
             font-size:26px;
             color: #ffffff;
+            text-align: center;
         }        
     }
     
@@ -71,15 +72,17 @@ ion-content {
     }
 
     #register {
-        padding-right: 120px;
-        padding-bottom: 50px;
-        padding-left: 120px;
-        
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    
         ion-item {
-            
+            height:48px;
+
             p {
                 font-size: 13px;
                 padding-left: 10px;
+                padding-right: 10px;
                 
                 a {
                     font-size: 14px;
