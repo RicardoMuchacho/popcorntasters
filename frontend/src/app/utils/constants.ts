@@ -1,2 +1,2 @@
-export const apiBaseUrl = "http://popcorntasters-api-production.up.railway.app/"
+export const apiBaseUrl = "https://popcorntasters-api-production.up.railway.app/"
   
